@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import iconCart from "./images/icon-cart.svg";
+import imageAvatar from "./images/image-avatar.png";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav />
     </div>
   );
 }
 
-export default App;
+function Nav() {
+  return (
+    <nav className="nav">
+      <div className="logo">
+        <p>sneakers</p>
+        <ul>
+          <li>
+            <a href="collection">Collections</a>
+          </li>
+          <li>
+            <a href="mens">Mens</a>
+          </li>
+          <li>
+            <a href="women">Womens</a>
+          </li>
+          <li>
+            <a href="about">About</a>
+          </li>
+          <li>
+            <a href="contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div className="cartComponent">
+        <img src={iconCart} alt="cartImg" />
+        <img src={imageAvatar} className="avatar" alt="Avatar" />
+      </div>
+    </nav>
+  );
+}
