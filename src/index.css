@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0;
+  padding: 2.2rem 0;
   border-bottom: 1px solid hsl(219, 9%, 45%);
 }
 .logo {
@@ -33,14 +33,15 @@ body {
   display: inline-block;
   margin-left: 2rem;
   /* border: 1px solid; */
-  padding: 2.5rem 0.5rem;
 }
 .logo ul li a {
   text-decoration: none;
   color: hsl(219, 9%, 45%);
+  padding-bottom: 2.8rem;
+  transition: 0.3s ease-in;
 }
-.logo ul li:hover {
-  border-bottom: 2px solid hsl(26, 100%, 55%);
+.logo ul li a:hover {
+  border-bottom: 4px solid hsl(26, 100%, 55%);
 }
 .logo p {
   font-family: ExtraBoldFont;
@@ -49,8 +50,29 @@ body {
 .avatar {
   width: 40px;
 }
+.body {
+  margin-top: 5rem;
+}
 .cartComponent {
   display: flex;
   align-items: center;
   gap: 3rem;
+}
+.img1 {
+  width: 40%;
+  border-radius: 20px;
+}
+.thumbnailImage {
+  margin: 2rem 0;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.thumbnailImage img {
+  width: 90px;
+  border-radius: 10px;
+}
+.thumbnailImage .active {
+  opacity: 0.6;
+  border: 2px solid hsl(26, 100%, 55%);
 }

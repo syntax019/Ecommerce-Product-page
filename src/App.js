@@ -1,10 +1,22 @@
 import iconCart from "./images/icon-cart.svg";
 import imageAvatar from "./images/image-avatar.png";
+import img1 from "./images/image-product-1.jpg";
+import img2 from "./images/image-product-2.jpg";
+import img3 from "./images/image-product-3.jpg";
+import img4 from "./images/image-product-4.jpg";
+import imgThumb1 from "./images/image-product-1-thumbnail.jpg";
+import imgThumb2 from "./images/image-product-2-thumbnail.jpg";
+import imgThumb3 from "./images/image-product-3-thumbnail.jpg";
+import imgThumb4 from "./images/image-product-4-thumbnail.jpg";
 
 export default function App() {
   return (
     <div>
       <Nav />
+      <div className="body">
+        <ImgComponent />
+        <Description />
+      </div>
     </div>
   );
 }
@@ -38,4 +50,21 @@ function Nav() {
       </div>
     </nav>
   );
+}
+
+function ImgComponent() {
+  return (
+    <div className="imgComponent">
+      <img src={img1} className="img1" alt="Image1" />
+      <div className="thumbnailImage">
+        <img src={imgThumb1} className="active" alt="thumbnailImg1" />
+        <img src={imgThumb2} alt="thumbnailImg1" />
+        <img src={imgThumb3} alt="thumbnailImg1" />
+        <img src={imgThumb4} alt="thumbnailImg1" />
+      </div>
+    </div>
+  );
+}
+function Description() {
+  return;
 }
