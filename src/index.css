@@ -11,6 +11,14 @@
   font-family: ExtraBoldFont;
   src: url(Kumbh_Sans/static/KumbhSans-ExtraBold.ttf);
 }
+@font-face {
+  font-family: SemiBoldFont;
+  src: url(Kumbh_Sans/static/KumbhSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: BoldFont;
+  src: url(Kumbh_Sans/static/KumbhSans-Bold.ttf);
+}
 
 body {
   margin: 0 6rem;
@@ -51,20 +59,32 @@ body {
   width: 40px;
 }
 .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 5rem;
+  padding: 0 5rem;
 }
-.cartComponent {
+.cartComponent,
+.actionButton {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
+.actionButton {
+  justify-content: space-between;
+}
+.imgComponent {
+  width: 43%;
+  /* border: 1px solid black; */
+}
 .img1 {
-  width: 40%;
+  width: 100%;
   border-radius: 20px;
 }
 .thumbnailImage {
   margin: 2rem 0;
-  width: 40%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -75,4 +95,58 @@ body {
 .thumbnailImage .active {
   opacity: 0.6;
   border: 2px solid hsl(26, 100%, 55%);
+}
+.description {
+  width: 43%;
+  /* border: 1px solid black; */
+}
+.companyName {
+  font-family: BoldFont;
+  color: hsl(26, 100%, 55%);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.description > h3 {
+  font-size: 43px;
+  font-family: ExtraBoldFont;
+  margin-bottom: 25px;
+}
+.productDescription {
+  color: hsl(213, 6%, 35%);
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+.pricingDiv {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.pricingDiv h3 {
+  font-size: 1.6rem;
+  font-family: BoldFont;
+}
+.pricingDiv p {
+  padding: 0.3rem 0.7rem;
+  color: hsl(26, 100%, 55%);
+  font-family: SemiBoldFont;
+  background-color: hsl(25, 100%, 94%);
+}
+.previousPrice {
+  text-decoration: line-through;
+  color: hsl(219, 9%, 45%);
+  margin-bottom: 40px;
+}
+.productAmount {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+button {
+  padding: 1rem 5rem;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(25, 100%, 94%);
+  font-family: SemiBoldFont;
+  border: none;
+  border-radius: 08px;
 }

@@ -8,6 +8,8 @@ import imgThumb1 from "./images/image-product-1-thumbnail.jpg";
 import imgThumb2 from "./images/image-product-2-thumbnail.jpg";
 import imgThumb3 from "./images/image-product-3-thumbnail.jpg";
 import imgThumb4 from "./images/image-product-4-thumbnail.jpg";
+import plus from "./images/icon-plus.svg";
+import minus from "./images/icon-minus.svg";
 
 export default function App() {
   return (
@@ -66,5 +68,28 @@ function ImgComponent() {
   );
 }
 function Description() {
-  return;
+  return (
+    <div className="description">
+      <p className="companyName">SNEAKER COMPANY</p>
+      <h3>Fall Limited Edition Sneakers</h3>
+      <p className="productDescription">
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they’ll withstand everything the
+        weather can offer.
+      </p>
+      <div className="pricingDiv">
+        <h3>$125.00</h3>
+        <p>50%</p>
+      </div>
+      <p className="previousPrice">$250.00</p>
+      <div className="actionButton">
+        <div className="productAmount">
+          <img src={minus} alt="minus" />
+          <p>0</p>
+          <img src={plus} alt="plus" />
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  );
 }
